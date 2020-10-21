@@ -24,4 +24,4 @@ console.log("----------------");
 console.log("2 selectElement id= " + "primoTag");
 console.log(selectElement("primoTag"));
 
-//AAA
+//AAAB
