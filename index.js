@@ -25,3 +25,4 @@ console.log("2 selectElement id= " + "primoTag");
 console.log(selectElement("primoTag"));
 
 //AAABC
+// xxxxx
