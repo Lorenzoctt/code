@@ -29,28 +29,28 @@ function handleSubmit(event) {
         method: "POST",
         body: data,
     };
+    //--------------------
+    fetch('https://jsonplaceholder.typicode.com')
+        .then(response => response.json())
+        .then(data => console.log(data));
+    //-------------------------
+
+    //fetch(`${baseUrl}/users/`, requestConfig)    
+    // fetch(`${baseUrl}/users`, requestConfig)    //Ottiene una lista dati con GET
+    //     .then((response) >=
+    //         //   if(!response.ok) throw Error(response.statusText);
+    //         response.json() //JSON
+
+    //             .then(json =>
+    //                 console.log(json))
+    //     );
 
 
 
-    fetch('${baseUrl}/users/', requestConfig)   //Ottine una lista dati con GET
-        .then((response) >= {
-            if(!response.ok) throw Error(response.statusText);
-
-
-    //JSON
-    return response.json();
-
-})
-    .then((json) => {
-    console.log(json);
-});
-
-
-
-
-console.log(data);
-console.log("Form inviato");
+    console.log(data);
+    console.log("Form inviato");
 }
+
 
 
 // BUBBLING ??

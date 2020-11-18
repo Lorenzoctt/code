@@ -5,12 +5,18 @@ const myUrl = "https://jsonplaceholder.typicode.com/users";
 const myButton = document.getElementById("keyfetch");
 
 
-
+//recupera un oggetto da internet e aggiunge la lista li sullo schermo 
 function fetchData() {
+    console.log("inizio");
+
+    // fetch('http://example.com/movies.json')
+    //     .then(response => response.json())
+    //     .then(data => console.log(data));
+
     fetch(myUrl)
         .then((response) => {
-            if (!response.ok) throw Error(response.statusText);
-            return response.json();
+            if (!response.ok) throw Error(response.statusText); //throw genera l'errore 
+            return response.json();//se ok si estrae la risposta nel formato json 
 
         }).then(postList => {
 
@@ -24,8 +30,8 @@ function fetchData() {
 
 
                 const li = document.createElement("li")
-                // const text = document.createTextNode('${name} - ${email}');
-                const text = document.createTextNode(name + " " + email);
+                const text = document.createTextNode(`${name} - ${email}`);
+                //const text = document.createTextNode(name + " " + email);
                 li.appendChild(text);
 
                 ul.appendChild(li);
@@ -33,14 +39,6 @@ function fetchData() {
             document.body.appendChild(ul);
         });
 };
-
-function fetchData2() {
-    fetch(myUrl)
-        .then(response => response.json())
-
-        .then(data => console.log(data));
-};
-
 
 
 
