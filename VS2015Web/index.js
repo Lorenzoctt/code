@@ -3,7 +3,7 @@ console.log("Marco è bravo 3");
 
 const header = document.querySelector("h1");
 // header.innerText = "AAAA"; 
-
+ 
 // document.querySelector("h1").innerHTML = "valore";
 console.log(header);
 
